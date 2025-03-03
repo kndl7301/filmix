@@ -1,0 +1,109 @@
+.admin-wrapper {
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+
+
+}
+
+
+.sidebar{
+    width: 260px;
+    height: 640px;
+    border:1px solid rgb(154, 152, 152);
+    border-radius: 7px;
+    padding: 5px;
+    margin: 5px;
+    
+
+}
+
+
+.sidebar  :hover{
+    color: rgb(234, 3, 3);
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.series-form, .episode-form {
+    width: 48%;
+}
+
+button {
+    width: 100%;
+}
+
+/* Overall admin layout */
+.admin-wrapper {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  .admin-layout {
+    display: flex;
+    height: 100%;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    width: 300px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height:700px;
+    margin-top: 100px;
+
+  }
+  
+  .sidebar .links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar .links a {
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+  
+  }
+  
+  .sidebar .links a:hover {
+    background-color: #17cd11;
+    border-radius: 7px;
+
+  }
+  
+  /* Dashboard area */
+  .dashboard {
+    margin-left: 260px; /* Offset to the right of the sidebar */
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Styling for individual cards (dashboard boxes) */
+  .card {
+    border-radius: 8px;
+  }
+  
+  .card-body {
+    padding: 20px;
+    text-align: center;
+    
+  }
+  
+  .card-body h4 {
+    margin-top: 10px;
+  }
+  
+  .card-body p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  

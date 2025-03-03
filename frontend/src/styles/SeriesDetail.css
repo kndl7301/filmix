@@ -1,0 +1,84 @@
+.series-detail {
+    background-color: rgb(0, 0, 0.7);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border: 1px solid wheat;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Episode List Grid */
+.episode-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive Grid */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.episode-card {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.episode-card:hover {
+    transform: scale(1.05);
+}
+
+/* Episode Image */
+.serie-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.episode-info {
+    padding-top: 10px;
+    color: white;
+}
+
+.episode-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.episode-Name {
+    color: rgb(221, 222, 233);
+}
+
+.episode-duration {
+    font-size: 14px;
+    color: #f39c12;
+}
+
+.episode-release-date {
+    font-size: 14px;
+    color: #f39c12;
+}

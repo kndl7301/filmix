@@ -1,0 +1,146 @@
+.homepage-wrapper {
+  position: relative;
+  background-image: url("/netflıxbackground.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.homepage-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity for shadow effect */
+  z-index: 1;
+}
+
+/* Ensure content appears above the overlay */
+.homepage-wrapper * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border: 1 px solid wheat;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+
+.yazı h1{
+
+  color: aliceblue;
+  text-align: center;
+  margin-top: 10%;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.yazı p{
+  text-align: center;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 20px;
+}
+.yazı span{
+margin-left: 250px;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 15px;
+  
+}
+.contact {
+  text-align: center;
+
+}
+
+.contact input{
+  font-size: 2.2rem;
+  background-color: rgba(0, 0, 0, 0.6); 
+  color: aliceblue;
+}
+
+.contact button{
+  font-size: 32px;
+  margin-bottom: 20px;
+
+}
+
+
+.user-info-dropdown {
+  position: absolute;
+  margin-top: 60px;
+  top: 60px;  /* Adjust based on your button's position */
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.user-info-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-info-dropdown li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.user-info-dropdown li:last-child {
+  margin-bottom: 0;
+}
+
+.user-info-dropdown li strong {
+  color: #555;
+}
+
+.contact-us{
+  color: wheat;
+  width: 500px;
+
+  
+}
+
+
+.btn-success{
+  font-weight: bold;
+}
+
+.footer{
+
+  height: 350px;
+  padding: 15px;
+  display: flex;
+  margin-left: 550px;
+}
