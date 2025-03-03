@@ -103,14 +103,7 @@ const Signup = () => {
                       onChange={(e) => setPassword(e.target.value)}
                       required
                     />
-                    <button
-                      type="button"
-                      className="btn btn-link position-absolute"
-                      style={{ top: '75%', right: '5px', transform: 'translateY(-50%)', fontSize: '25px', color: 'black' }}
-                      onClick={handlePasswordToggle}
-                    >
-                      {showPassword ? '🙈' : '👁️'}
-                    </button>
+                    
                   </div>
 
                   <button type="submit" className="btn btn-success w-100 py-2">
