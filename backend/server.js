@@ -13,6 +13,21 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const cors = require('cors');
+
+
+
+// Allow requests from your frontend URL
+const corsOptions = {
+  origin: 'https://filmix-1.onrender.com', // Allow only this frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,  // Allow cookies (if needed)
+};
+
+app.use(cors(corsOptions));
+
+
+
 let db;
 
 async function connectDB() {
