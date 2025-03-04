@@ -1,30 +1,37 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
 const cors = require('cors');
+require('dotenv').config(); // Load environment variables
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
+const uri = process.env.MONGO_URI; // Get MongoDB URI from .env
+
+const client = new MongoClient(uri);
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const uri = "mongodb://localhost:27017";
-const client = new MongoClient(uri);
 let db;
 
 async function connectDB() {
   try {
     await client.connect();
     db = client.db("filmix");
-    console.log("MongoDB'ye başarıyla bağlanıldı");
+    console.log("✅ Connected to MongoDB Atlas");
   } catch (error) {
-    console.error("MongoDB bağlantı hatası:", error);
+    console.error("❌ MongoDB Connection Error:", error);
     process.exit(1);
   }
 }
 
 connectDB();
+
+app.get("/", (req, res) => {
+  res.send("Filmix Backend is Running");
+});
+
 
 // **LOGIN API**
 app.post('/api/login', async (req, res) => {
