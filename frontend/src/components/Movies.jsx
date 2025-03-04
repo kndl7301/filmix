@@ -47,7 +47,7 @@ function Movies() {
 
         const fetchMovies = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/films');
+                const response = await axios.get('https://filmix-dfzo.onrender.com/api/films');
                 console.log("Gelen veriler:", response.data);
                 setMovies(response.data);
             } catch (error) {

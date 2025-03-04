@@ -27,7 +27,7 @@ function AddPopular() {
         console.log("Sending popular data:", popular); // Debugging log
     
         try {
-            const response = await axios.post('http://localhost:5000/api/popular', popular);
+            const response = await axios.post('https://filmix-dfzo.onrender.com/api/popular', popular);
             console.log("Response from server:", response.data); // Log server response
             alert('popular added successfully!');
             setPopular({ id: '', title: '', rating: '', poster: '', release_year: '' });

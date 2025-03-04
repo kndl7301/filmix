@@ -31,7 +31,7 @@ function AddSeries() {
         console.log("Sending series data:", series);
     
         try {
-            const response = await axios.post('http://localhost:5000/api/series', series);
+            const response = await axios.post('https://filmix-dfzo.onrender.com/api/series', series);
             console.log("Response from server:", response.data);
             alert('Series added successfully!');
             setSeries({ id: '', title: '', rating: '', poster: '', release_year: '', episodes: [] });

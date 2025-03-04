@@ -15,7 +15,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/login', { email, password });
+      const response = await axios.post('https://filmix-dfzo.onrender.com/api/login', { email, password });
 
       console.log(response.data);  // Log the response to see the returned data
 

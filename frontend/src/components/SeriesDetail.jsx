@@ -35,7 +35,7 @@ function SeriesDetail() {
     useEffect(() => {
         const fetchSeriesDetail = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/series/${id}`);
+                const response = await axios.get(`https://filmix-dfzo.onrender.com/api/series/${id}`);
                 setSeries(response.data);
             } catch (error) {
                 console.error("Error fetching series details:", error.message);

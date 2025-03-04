@@ -28,7 +28,7 @@ function AddMovies() {
         console.log("Sending movie data:", movie); // Debugging log
     
         try {
-            const response = await axios.post('http://localhost:5000/api/films', movie);
+            const response = await axios.post('https://filmix-dfzo.onrender.com/films', movie);
             console.log("Response from server:", response.data); // Log server response
             alert('Movie added successfully!');
             navigate('http://localhost:5000/movies');

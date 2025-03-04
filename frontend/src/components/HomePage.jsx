@@ -63,7 +63,7 @@ function HomePage() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/messages", messageInfo);
+      await axios.post("https://filmix-dfzo.onrender.com/api/messages", messageInfo);
       alert("Message sent successfully!");
       setMessageInfo({ name:"",email: "",  message: "" }); // Clear the form
     } catch (error) {

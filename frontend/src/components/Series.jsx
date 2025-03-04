@@ -45,7 +45,7 @@ const [series,setSeries]=useState([])
     useEffect (()=>{
         const fetchSeries =async ()=>{
             try {
-                const response = await axios.get('http://localhost:5000/api/series');
+                const response = await axios.get('https://filmix-dfzo.onrender.com/api/series');
                 console.log("Gelen Veriler ",response.data);
                 setSeries(response.data);
                 

@@ -14,7 +14,7 @@ const Messages = () => {
 
   const fetchMessages = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/messages");
+      const response = await axios.get("https://filmix-dfzo.onrender.com/api/messages");
       console.log("Gelen veriler:", response.data);
       setMessages(response.data); // ✅ Corrected setter
     } catch (error) {

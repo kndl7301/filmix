@@ -45,7 +45,7 @@ useEffect(() => {
     useEffect(() => {
         const fetchPopular = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/popular');
+                const response = await axios.get('https://filmix-dfzo.onrender.com/api/popular');
                 console.log("Gelen Veriler:", response.data);
 
                 if (Array.isArray(response.data)) {
@@ -96,7 +96,7 @@ useEffect(() => {
                                         popular.poster 
                                             ? (popular.poster.startsWith("http") 
                                                 ? popular.poster 
-                                                : `http://localhost:5000/${popular.poster}`
+                                                : `https://filmix-dfzo.onrender.com/${popular.poster}`
                                               ) 
                                             : 'https://picsum.photos/200/300'
                                     }

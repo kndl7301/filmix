@@ -20,7 +20,7 @@ function AddSeriesEpisode() {
     useEffect(() => {
         const fetchSeries = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/series');
+                const response = await axios.get('https://filmix-dfzo.onrender.com/api/series');
                 setSeriesList(response.data);
             } catch (error) {
                 console.error('Error fetching series list:', error);
@@ -49,7 +49,7 @@ function AddSeriesEpisode() {
         }
 
         try {
-            const response = await axios.post(`http://localhost:5000/api/series/${selectedSeries}/episodes`, episode);
+            const response = await axios.post(`https://filmix-dfzo.onrender.com/api/series/${selectedSeries}/episodes`, episode);
             console.log("Episode added:", response.data);
             alert('Episode added successfully!');
             navigate(`/series/${selectedSeries}`); // Navigate to the series details page

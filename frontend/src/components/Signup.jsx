@@ -20,7 +20,7 @@ const Signup = () => {
       // Log data being sent to the backend for debugging
       console.log('Sending request:', { userName, gsm, email, password });
 
-      const response = await axios.post('http://localhost:5000/api/signup', { userName, gsm, email, password });
+      const response = await axios.post('https://filmix-dfzo.onrender.com/api/signup', { userName, gsm, email, password });
       
       // Check the backend response
       console.log('Response:', response.data);

@@ -14,7 +14,7 @@ const UsersInfo = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/users");
+      const response = await axios.get("https://filmix-dfzo.onrender.com/api/users");
       console.log("Gelen veriler:", response.data);
       setUsers(response.data);
     } catch (error) {
@@ -24,7 +24,7 @@ const UsersInfo = () => {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/users/${id}`);
+      await axios.delete(`https://filmix-dfzo.onrender.com/api/users/${id}`);
       setUsers(users.filter((user) => user.id !== id)); // ✅ Fixed here
       alert("User has been deleted");
       console.log("User has been deleted:", id);

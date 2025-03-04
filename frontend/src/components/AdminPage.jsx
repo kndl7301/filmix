@@ -36,11 +36,11 @@ function AdminPage() {
     const fetchDashboardData = async () => {
       try {
         // Fetch the count for movies
-        const movieResponse = await axios.get("http://localhost:5000/api/films");
+        const movieResponse = await axios.get("https://filmix-dfzo.onrender.com/api/films");
         const movieCount = movieResponse.data.length;
 
         // Fetch the count for series
-        const seriesResponse = await axios.get("http://localhost:5000/api/series");
+        const seriesResponse = await axios.get("https://filmix-dfzo.onrender.com/api/series");
         const seriesCount = seriesResponse.data.length;
 
         // Count the total number of episodes across all series
@@ -50,16 +50,16 @@ function AdminPage() {
         });
 
         // Fetch the count for popular movie and series
-        const popularResponse = await axios.get("http://localhost:5000/api/popular");
+        const popularResponse = await axios.get("https://filmix-dfzo.onrender.com/api/popular");
         const popularCount = popularResponse.data.length;
 
         // Fetch the count for users
-        const userResponse = await axios.get("http://localhost:5000/api/users");
+        const userResponse = await axios.get("https://filmix-dfzo.onrender.com/api/users");
         const userCount = userResponse.data.length;
 
         // Fetch the count for messages
         // Assuming you have an endpoint for messages (replace with actual endpoint)
-        const messageResponse = await axios.get("http://localhost:5000/api/messages");
+        const messageResponse = await axios.get("https://filmix-dfzo.onrender.com/api/messages");
           const messageCount = messageResponse.data.length;
 
         // Set the state with the fetched counts
