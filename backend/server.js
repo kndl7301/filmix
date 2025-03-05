@@ -9,13 +9,8 @@ const uri = process.env.MONGO_URI; // Get MongoDB URI from .env
 
 const client = new MongoClient(uri);
 
-app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-const cors = require('cors');
-
-
 
 // Allow requests from your frontend URL
 const corsOptions = {
@@ -25,8 +20,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-
-
 
 let db;
 
