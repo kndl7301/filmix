@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Allow requests from your frontend URL
 const corsOptions = {
-  origin: 'https://filmix-1.onrender.com', // Allow only this frontend URL
+  origin: ['https://filmix-1.onrender.com', 'http://localhost:5173'], // Allow only this frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,  // Allow cookies (if needed)
 };
@@ -388,7 +388,7 @@ app.get("/api/messages", async (req, res) => {
 
 // **SERVER START**
 app.listen(port, () => {
-  console.log(`Server http://localhost:${port} üzerinde çalışıyor`);
+  console.log(`Server https://filmix-dfzo.onrender.com/:${port} üzerinde çalışıyor`);
 });
 
 
