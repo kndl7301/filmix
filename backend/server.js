@@ -14,12 +14,16 @@ app.use(express.urlencoded({ extended: true }));
 
 // Allow requests from your frontend URL
 const corsOptions = {
-  origin: ['https://filmix-1.onrender.com', 'http://localhost:5173'], // Allow only this frontend URL
+  origin: ['https://filmix-1.onrender.com', 'http://localhost:5173','http://localhost:5174'], // Allow only this frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,  // Allow cookies (if needed)
 };
 
 app.use(cors(corsOptions));
+
+// ✅ Handle preflight requests
+app.options('*', cors(corsOptions)); 
+
 
 let db;
 
