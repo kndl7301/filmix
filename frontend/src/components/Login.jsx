@@ -10,12 +10,12 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-
+  const API_URL = import.meta.env.VITE_API_URL; 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://filmix-dfzo.onrender.com/api/login', { email, password });
+      const response = await axios.post(`${API_URL}/api/login`, { email, password });
 
       console.log(response.data);  // Log the response to see the returned data
 
