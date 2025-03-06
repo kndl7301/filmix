@@ -379,7 +379,7 @@ app.post("/api/messages", async (req, res) => {
 // **Messages API**
 app.get("/api/messages", async (req, res) => {
   try {
-    const messages = await db.collection('messages').find().toArray();
+    const messages = await db.collection('messages').find().sort({ _id: -1 }) .toArray();
     res.json(messages);
   } catch (error) {
     console.error("Error fetching messages:", error); // Log the error

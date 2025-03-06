@@ -82,7 +82,7 @@ button {
   
   /* Dashboard area */
   .dashboard {
-    margin-left: 260px; /* Offset to the right of the sidebar */
+    margin-left: 275px; /* Offset to the right of the sidebar */
     flex: 1;
     padding: 20px;
   }
