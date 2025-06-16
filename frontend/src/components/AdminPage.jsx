@@ -108,7 +108,7 @@ function AdminPage() {
         </div>
 
         {/* Dashboard Area (Flex next to sidebar) */}
-        <div className="dashboard">
+        <div className="dashboard" style={{marginLeft:"350px"}}>
           <Container>
             <h2 className="text-center mb-4">Admin Dashboard</h2>
             <Row>
