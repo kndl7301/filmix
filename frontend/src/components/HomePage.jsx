@@ -153,7 +153,7 @@ function HomePage() {
 
     
       {/* Message Section */}
-      <div className="message-section contact-us">
+      <div className="message-section contact-us" style={{marginLeft:"-90px"}}>
         <h2>Contact Us</h2>
         <form onSubmit={handleSendMessage}>
         <div className="form-group">

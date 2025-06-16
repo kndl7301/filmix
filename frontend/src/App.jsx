@@ -15,6 +15,7 @@ import UsersInfo from './components/UsersInfo';
 import AddSeriesEpisode from './components/AddSeriesEpisode';
 import Messages from './components/Messages';
 
+
 const isAuthenticated = () => {
   return !!localStorage.getItem('token'); // Check if token exists
 };
@@ -38,6 +39,7 @@ function App() {
         <Route path="/userinfo" element={isAuthenticated() ? <UsersInfo /> : <Navigate to="/" />} />
         <Route path="/addseriesepisode" element={isAuthenticated() ? <AddSeriesEpisode /> : <Navigate to="/" />} />
         <Route path="/messages" element={isAuthenticated() ? <Messages /> : <Navigate to="/" />} />
+      
 
       </Routes>
     </Router>
